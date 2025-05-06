@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: max(100vh, auto);
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+/* Making the calculator body */
+
+.calculator {
+    max-width: 500px;
+    width: 80%;
+    background-color: #2e2e2e;
+    border-radius: 20px;
+    margin-top: 3vh;
+    padding: 20px 10px;
+    position: relative;
+    /* box-shadow: 0px 0px 6px 2px #fd2b2b, 0px 0px 6px 2px #e42424; */
+}
+
+/* Another Shadow */
+
+.calculator {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2),
+                0 0 25px rgba(255, 0, 0, 0.2),
+                0 0 35px rgba(255, 0, 0, 0.2),
+                0 0 45px rgba(255, 0, 0, 0.2);
+}
+
+.animated-evilness {
+    position: relative;
+    animation: animated-evilness-shadow 4s 2, animated-evilness-body 4s 1;
+    transition: all 0.5s;
+}
+
+@keyframes animated-evilness-shadow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2), 0 0 25px rgba(255, 0, 0, 0.2), 0 0 35px rgba(255, 0, 0, 0.2), 0 0 45px rgba(255, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 60px 50px rgba(255, 0, 0, 0.4), 0 0 70px  50px rgba(255, 0, 0, 0.4), 0 0 80px  50px rgba(255, 0, 0, 0.4), 0 0 90px 50px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2), 0 0 25px rgba(255, 0, 0, 0.2), 0 0 35px rgba(255, 0, 0, 0.2), 0 0 45px rgba(255, 0, 0, 0.2);
+    }
+}
+
+@keyframes animated-evilness-body {
+    0% {
+        transform: rotate(0deg) skew(0deg);
+    }
+    25% {
+        transform: rotate(10deg) skew(10deg);
+    }
+    75% {
+        transform: rotate(-50deg) skew(-50deg);
+    }
+    100% {
+        transform: rotate(0deg) skew(0deg);
+    }
+}
+
+/*
+=============================================================
+              Animation for the buttons
+=============================================================
+*/
+
+@keyframes throwingButtonsE1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(1000px);
+    }
+}
+@keyframes throwingButtonsE2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+@keyframes throwingButtonsE3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2141px) translateX(-1320px);
+    }
+    100% {
+        transform: translateY(1000);
+    }
+}
+@keyframes throwingButtonsE4 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+@keyframes throwingButtonsE5 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes throwingButtonsE6 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+@keyframes throwingButtonsE7 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+@keyframes throwingButtonsE8 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+
+/* 
+=======================================
+       Normalizing the buttons
+=======================================
+*/
+
+@keyframes normalizingButtonsE1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(1000px);
+    }
+}
+@keyframes normalizingButtonsE2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+@keyframes normalizingButtonsE3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2141px) translateX(-1320px);
+    }
+    100% {
+        transform: translateY(1000);
+    }
+}
+@keyframes normalizingButtonsE4 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+@keyframes normalizingButtonsE5 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+@keyframes normalizingButtonsE6 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+@keyframes normalizingButtonsE7 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px) translateX(-1000px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+@keyframes normalizingButtonsE8 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* 
+@keyframes subtleEvilShadow {
+    0% {
+        filter: blur(25px);
+        opacity: 0.9;
+        transform: scale(1);
+    }
+    100% {
+        filter: blur(40px);
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes intenseEvilShadow {
+    0% {
+        filter: blur(25px);
+        opacity: 0.9;
+        transform: scale(2);
+    }
+    100% {
+        filter: blur(100px);
+        opacity: 0.4;
+        transform: scale(5);
+    }
+}
+ */
+
+/* 
+===============================================
+        Responsiveness for Mobile
+===============================================
+ */
+
+
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 90%;
+        height: auto;
+    }
+
+    body {
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .controller-buttons {
+        margin-top: 20px;
+    }
+}
+
+.display > input {
+    padding: 10px 0;
+    width: 100%;
+    background-color: #504f4f;
+    border-right: 1px solid #720a0a;
+    border-bottom: 1px solid #720a0a;
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: right;
+    border-radius: 20px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 2rem;
+    background-color: #d60d0d; /*Tryna give this a vampire vibe!*/
+    color: #ffffff;
+    border: .5px solid #720a0a;
+    border-radius: 20px;
+    margin: 4px;
+    transition: all .3s;
+}
+
+.btn.operator {
+    background-color: #720a0a;
+    color: #ffffff;
+}
+
+.btn[value="="] {
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+}
+
+.btn:hover:not(.operator) {
+    background-color: #ff2b2b;
+    color: #ffffff;
+}
+
+.btn.operator:hover {
+    background-color: #d11c1c;
+    color: #ffffff;
+}
+.btn:hover{
+    font-size: 1.1remrem;
+    cursor: pointer;
+}
+
+.btn:active {
+    font-size: 0.9rem;
+    cursor: grabbing;
+}
+
+
+
+/* 
+=======================================
+           Controller Buttons
+=======================================
+*/
+
+.controller-buttons {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+/* Styling the normalize button */
+.controller-buttons .normalizeBtn {
+    width: 275px;
+    margin-top: 10px;
+    padding: 15px 0;
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    background-color: #440000;
+    color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.controller-buttons .normalizeBtn:hover {
+    font-size: 2rem;
+}
+
+.controller-buttons .normalizeBtn:active {
+    font-size: 1.7rem;
+}

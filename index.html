@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil Calculator!</title>
+    <!-- 'Sigmar', serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <!-- 'Sigmar', serif -->
+     <!-- Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Playfair Display -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="button-style.css">
+    <link rel="stylesheet" href="glassyStyle.css">
+    <script src="https://kit.fontawesome.com/44f293731a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="controller-buttons">
+        <div class="sound-btn">
+            <a href="#" class="animated-button1" onclick="toggleSoundButton()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Evilness
+                <div style="font-size:0.6rem;letter-spacing:1.0001em;color:red;">DO NOT PRESS!</div>
+            </a>
+        </div>
+        <button class="normalizeBtn" onclick="normalize()">Stop The Madness</button>
+    </div>
+
+    <div class="calculator vampire-theme">
+        <div class="display">
+            <input type="text" readonly value="" id="display">
+        </div>
+        <div class="buttons">
+            <!-- Evil classes: e1 e2 e3 e4 e5 e6 e7 e8 -->
+            <button class="btn operator e1" onclick="clearDisplay()" value="C">C</button>
+            <button class="btn operator e2" onclick="clickToAppend('/')" value="/"><i class="fa-solid fa-divide"></i></button>
+            <button class="btn operator e4" onclick="clickToAppend('*')" value="*"><i class="fa-solid fa-multiply"></i></button>
+            <button class="btn operator e8" onclick="clickToCut('cut')" value="cut"><i class="fa fa-scissors" aria-hidden="true"></i></button>
+            <button class="btn numbers e8" onclick="clickToAppend('7')" value="7">7</button>
+            <button class="btn number e5" onclick="clickToAppend('8')" value="8">8</button>
+            <button class="btn number e2" onclick="clickToAppend('9')" value="9">9</button>
+            <button class="btn operator e5" onclick="clickToAppend('-')" value="minus"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button class="btn number e6" onclick="clickToAppend('4')" value="4">4</button>
+            <button class="btn number e6" onclick="clickToAppend('5')" value="5">5</button>
+            <button class="btn number e8" onclick="clickToAppend('6')" value="6">6</button>
+            <button class="btn operator e6" onclick="clickToAppend('+')" value="plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button class="btn number e7" onclick="clickToAppend('1')" value="1">1</button>
+            <button class="btn number e3" onclick="clickToAppend('2')" value="2">2</button>
+            <button class="btn number e7" onclick="clickToAppend('3')" value="3">3</button>
+            <button class="btn operator e3" onclick="calculate()" value="="><i class="fa-solid fa-equals"></i></button>
+            <button class="btn operator e5" onclick="clickToAppend('%')" value="%">%</button>
+            <button class="btn number e4" onclick="clickToAppend('0')" value="0">0</button>
+            <button class="btn operator e7" onclick="clickToAppend('.')" value=".">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
